@@ -251,41 +251,41 @@
 <div class="container">
 
     <header>
-        <h1>Informe de Diagnóstico y Plan de Acompañamiento Técnico</h1>
+        <h1>Propuesta de Diagnóstico y Plan de Acompañamiento Técnico</h1>
         <h2>Hackathon Nicaragua 2026</h2>
         <div class="meta">
-            <span><strong>Preparado por:</strong> Coordinación Técnica — Centro de Innovación (INATEC)</span>
+            <span><strong>Preparado por:</strong> Cristian Ezequiel Rojas Gutiérrez, Especialista de Formación Profesional</span>
             <span><strong>Fecha:</strong> Mayo 2026</span>
         </div>
     </header>
 
     <!-- ═══════════════ 1. RESUMEN EJECUTIVO ═══════════════ -->
     <section>
-        <h2>1. Resumen Ejecutivo</h2>
-        <p>El presente documento resume los resultados del primer diagnóstico técnico realizado a los <strong>17 equipos</strong> participantes en la fase de incubación del Hackathon Nicaragua 2026. Este análisis evaluó áreas clave como la conformación de los equipos, el manejo del código, las tecnologías seleccionadas y las estrategias de control de calidad.</p>
-        <p>El propósito de este diagnóstico es asegurar que las aplicaciones desarrolladas sean estables, seguras y viables para su uso a largo plazo.</p>
+        <h2>1. Resumen Ejecutivo (Propuesta)</h2>
+        <p>El presente documento resume los hallazgos preliminares de un diagnóstico técnico realizado a una muestra de <strong>17 startups</strong> que respondieron al formulario inicial en el momento del corte de datos. Este análisis, basado en las respuestas obtenidas a través del <a href="https://github.com/RojasCristianE/diagnostico-arquitectura-hn26/blob/main/Formularios/Diagn%C3%B3stico%20de%20Arquitectura%20y%20Plan%20de%20Desarrollo.md" style="color: var(--primary);">Formulario de Diagnóstico de Arquitectura</a>, evalúa áreas como la conformación de equipos, manejo de código y tecnologías seleccionadas.</p>
+        <p>Se presenta como una prueba de concepto para identificar posibles sugerencias de acompañamiento que aseguren la estabilidad y viabilidad técnica de los proyectos a largo plazo.</p>
 
         <div class="summary-grid">
             <div class="summary-item">
                 <div class="number">17</div>
-                <div class="label">Proyectos Evaluados</div>
+                <div class="label">Startups Analizadas (Muestra)</div>
             </div>
             <div class="summary-item">
                 <div class="number" style="color: var(--danger);">3</div>
-                <div class="label">Atención Urgente (17.6%)</div>
+                <div class="label">Sugerencia de Atención Urgente</div>
             </div>
             <div class="summary-item">
                 <div class="number" style="color: var(--accent);">7</div>
-                <div class="label">Atención Moderada (41.2%)</div>
+                <div class="label">Sugerencia de Atención Moderada</div>
             </div>
             <div class="summary-item">
                 <div class="number" style="color: var(--success);">7</div>
-                <div class="label">Progreso Adecuado (41.2%)</div>
+                <div class="label">Progreso Observado</div>
             </div>
         </div>
 
         <div class="callout">
-            <strong>Principal Punto de Mejora:</strong> Control de Calidad (Pruebas de funcionamiento). Más del 50% de los equipos realizan pruebas manuales básicas y un 17.6% prueba "a medida que programa", sin contar con un método estructurado para evitar errores, lo cual es riesgoso considerando que el 64.7% de los proyectos manejará información sensible de los usuarios.
+            <strong>Área de Oportunidad Sugerida:</strong> Control de Calidad. Basado en la muestra, una parte significativa de los equipos parece realizar pruebas de forma ad-hoc, lo que sugiere una oportunidad para fortalecer los procesos de validación técnica.
         </div>
     </section>
 
@@ -293,8 +293,8 @@
 
     <!-- ═══════════════ 2. TECNOLOGÍAS ═══════════════ -->
     <section>
-        <h2>2. Tecnologías Preferidas por los Equipos</h2>
-        <p>El análisis muestra tendencias claras en las herramientas elegidas por los jóvenes para construir sus aplicaciones:</p>
+        <h2>2. Tendencias Tecnológicas Observadas</h2>
+        <p>A partir de la muestra analizada, se identifican las siguientes tendencias en las herramientas elegidas por los equipos:</p>
         <ul>
             <li><strong>Interfaz de Usuario (Diseño visual y apps):</strong> La mayoría (52.9%) se inclina por tecnologías móviles (Flutter / React Native), demostrando una fuerte preferencia por crear aplicaciones para celulares, seguido por páginas web tradicionales (29.4%).</li>
             <li><strong>Lógica y Bases de Datos:</strong> El 29.4% prefiere utilizar plataformas en la nube pre-configuradas (como Firebase o Supabase), mientras que el resto se divide entre tecnologías de programación a medida como Node.js y Python.</li>
@@ -312,7 +312,7 @@
         </div>
 
         <div class="callout">
-            <strong>Observación de la Coordinación Técnica:</strong> El uso intensivo de plataformas en la nube pre-configuradas puede generar costos imprevistos a futuro si las aplicaciones crecen. Actualmente, el <strong>41.2%</strong> de los equipos indica que "aún no ha explorado los costos para mantener su aplicación en línea", por lo que se requiere asesoría urgente en este aspecto.
+            <strong>Sugerencia de Acompañamiento:</strong> Se observa que el uso de plataformas en la nube pre-configuradas es común. Dado que una parte de la muestra aún no ha explorado los costos de mantenimiento, se sugiere incluir sesiones sobre optimización de recursos en la nube.
         </div>
     </section>
 
@@ -320,97 +320,84 @@
 
     <!-- ═══════════════ 3. ÁREAS DE ATENCIÓN ═══════════════ -->
     <section>
-        <h2>3. Áreas de Atención Prioritaria</h2>
-        <p>El sistema de análisis identificó ciertas deficiencias que deben corregirse para evitar problemas en etapas posteriores:</p>
+        <h2>3. Posibles Áreas de Atención</h2>
+        <p>El análisis sugiere considerar las siguientes áreas para fortalecer el desarrollo de los proyectos:</p>
 
         <div class="card">
-            <h4>🚨 Seguridad de la Información y Manejo del Código</h4>
-            <p><strong>Equipo Destacado:</strong> Va D' Viaje (Anteriormente NikaRoute+)</p>
-            <p>El equipo planea manejar datos sensibles (ubicación de usuarios en tiempo real), pero actualmente guarda y comparte su código de forma insegura (memorias USB, WhatsApp o Google Drive).</p>
-            <p><span class="tag tag-danger">Acción:</span> Exigir y enseñar el uso de plataformas seguras y profesionales para guardar el código (como GitHub).</p>
+            <h4>🚨 Gestión del Código y Seguridad</h4>
+            <p><strong>Observación en muestra:</strong> Va D' Viaje (Anteriormente NikaRoute+)</p>
+            <p>Se identificó la oportunidad de migrar la gestión de código desde métodos manuales hacia plataformas profesionales de control de versiones.</p>
+            <p><span class="tag tag-danger">Propuesta:</span> Fomentar el uso de repositorios en la nube para asegurar la trazabilidad del desarrollo.</p>
         </div>
 
         <div class="card">
-            <h4>⚠️ Falta de Control de Calidad</h4>
-            <p><strong>7 proyectos afectados:</strong> No te Aisles, Kira, MilpaGrow, NexuVida, NicaPrime, Nicabite/Fritinder, Hogari.</p>
-            <p>Son proyectos complejos que carecen de un plan estructurado para comprobar que la aplicación funcione bien antes de presentarla.</p>
-            <p><span class="tag tag-warn">Acción:</span> Capacitarlos en la creación de pruebas de funcionamiento básico.</p>
+            <h4>⚠️ Fortalecimiento de Control de Calidad</h4>
+            <p><strong>Casos en muestra:</strong> No te Aisles, Kira, MilpaGrow, NexuVida, NicaPrime, Nicabite/Fritinder, Hogari.</p>
+            <p>Para proyectos con lógica compleja, se sugiere estructurar planes de pruebas de funcionamiento básico.</p>
+            <p><span class="tag tag-warn">Propuesta:</span> Introducir conceptos de pruebas manuales estructuradas o QA básico.</p>
         </div>
 
         <div class="card">
-            <h4>📉 Planificación de Costos y Presupuesto</h4>
-            <p><strong>Equipos afectados:</strong> No te Aisles, Nicabite/Fritinder, Hogari.</p>
-            <p>Proyectos de alta dificultad técnica que no han contemplado cuánto costará mantener la aplicación funcionando en internet.</p>
-            <p><span class="tag tag-warn">Acción:</span> Sesiones de trabajo para optimizar recursos y buscar alternativas gratuitas viables.</p>
+            <h4>📉 Estimación de Costos Operativos</h4>
+            <p><strong>Casos en muestra:</strong> No te Aisles, Nicabite/Fritinder, Hogari.</p>
+            <p>Se propone apoyar a estos equipos en la proyección de costos de infraestructura para evitar bloqueos por falta de presupuesto.</p>
+            <p><span class="tag tag-warn">Propuesta:</span> Revisión de alternativas 'Free Tier' y optimización de servicios.</p>
         </div>
 
         <figure class="full-width">
             <img src="assets/03_security_matrix.png" alt="Matriz de Vulnerabilidad de Seguridad" loading="lazy">
-            <figcaption>Cruce entre sensibilidad de datos y gestión del código fuente</figcaption>
+            <figcaption>Relación entre sensibilidad de datos y gestión de código observada en la muestra</figcaption>
         </figure>
     </section>
 
     <hr>
 
-    <!-- ═══════════════ 4. CASOS URGENTES ═══════════════ -->
+    <!-- ═══════════════ 4. CASOS PARA SEGUIMIENTO ═══════════════ -->
     <section>
-        <h2>4. Casos que Requieren Acompañamiento Urgente</h2>
-        <p>Existen tres proyectos que, por su alta dificultad y falta de organización técnica, requieren intervención inmediata:</p>
+        <h2>4. Casos Propuestos para Seguimiento Prioritario</h2>
+        <p>A partir de la muestra, se identifican proyectos que podrían beneficiarse de un acompañamiento técnico más cercano debido a su complejidad percibida:</p>
 
         <figure class="full-width">
             <img src="assets/02_risk_ranking.png" alt="Ranking de Riesgo Arquitectónico" loading="lazy">
-            <figcaption>Ranking completo de los 17 equipos ordenados por nivel de riesgo</figcaption>
+            <figcaption>Ranking de la muestra analizada según indicadores de riesgo técnico</figcaption>
         </figure>
 
         <div class="card" style="border-left: 3px solid var(--danger);">
-            <h4>Caso A: "No te Aisles" <span class="tag tag-danger">Urgente</span></h4>
-            <p><strong>Diagnóstico:</strong> Es el proyecto que requiere mayor atención. Tienen una idea muy compleja, dependen totalmente de servicios externos, no han calculado costos, carecen de programadores dedicados y no tienen plan de pruebas.</p>
-            <p><strong>Plan de Acción:</strong> Reducir las funciones de la aplicación a lo más esencial (pivoteo) para que puedan terminar a tiempo.</p>
+            <h4>Caso A: "No te Aisles" <span class="tag tag-danger">Prioridad</span></h4>
+            <p><strong>Diagnóstico Sugerido:</strong> Proyecto con alta dependencia externa y complejidad percibida. Se sugiere revisar la priorización de funcionalidades para asegurar la entrega del MVP.</p>
+            <p><strong>Propuesta de Acción:</strong> Sesión de simplificación técnica y priorización de funciones críticas.</p>
         </div>
 
         <div class="card" style="border-left: 3px solid var(--danger);">
-            <h4>Caso B: "IslaVoz" <span class="tag tag-danger">Urgente</span></h4>
-            <p><strong>Diagnóstico:</strong> Aunque su idea es más sencilla, siguen compartiendo su código de manera manual e insegura y no tienen cómo probar la aplicación eficientemente.</p>
-            <p><strong>Plan de Acción:</strong> Asignación de un mentor para configurar inmediatamente un sistema profesional para guardar su código.</p>
+            <h4>Caso B: "IslaVoz" <span class="tag tag-danger">Prioridad</span></h4>
+            <p><strong>Diagnóstico Sugerido:</strong> Oportunidad de mejora en la seguridad de la gestión de activos digitales y código fuente.</p>
+            <p><strong>Propuesta de Acción:</strong> Apoyo técnico para la configuración de entornos de desarrollo colaborativos seguros.</p>
         </div>
 
         <div class="card" style="border-left: 3px solid var(--danger);">
-            <h4>Caso C: "Hogari" <span class="tag tag-danger">Urgente</span></h4>
-            <p><strong>Diagnóstico:</strong> Manejarán datos personales, pero no tienen programadores dedicados ni presupuesto planificado.</p>
-            <p><strong>Plan de Acción:</strong> Orientarlos hacia tecnologías gratuitas y simplificar su diseño técnico.</p>
+            <h4>Caso C: "Hogari" <span class="tag tag-danger">Prioridad</span></h4>
+            <p><strong>Diagnóstico Sugerido:</strong> Requiere definición de roles técnicos y planificación de infraestructura para el manejo de datos.</p>
+            <p><strong>Propuesta de Acción:</strong> Orientación hacia arquitecturas simplificadas y de bajo costo.</p>
         </div>
 
         <div class="viz-grid">
             <figure>
                 <img src="assets/06_complexity_landscape.png" alt="Paisaje de Complejidad vs Riesgo" loading="lazy">
-                <figcaption>Complejidad vs Riesgo — Los puntos más grandes tienen más alertas activas</figcaption>
+                <figcaption>Visualización de Complejidad vs Riesgo basada en la muestra analizada</figcaption>
             </figure>
             <figure>
                 <img src="assets/05_mentorship_distribution.png" alt="Distribución de Mentoría" loading="lazy">
-                <figcaption>Áreas de mentoría más solicitadas por los equipos</figcaption>
+                <figcaption>Áreas de mentoría con mayor demanda potencial según las respuestas</figcaption>
             </figure>
         </div>
     </section>
 
     <hr>
 
-    <!-- ═══════════════ 5. HITOS ═══════════════ -->
+    <!-- ═══════════════ 5. HORARIOS ═══════════════ -->
     <section>
-        <h2>5. Hitos de Evaluación (Puntos de Control)</h2>
-        <p>Para garantizar la calidad de los proyectos y no saturar al equipo de coordinación, se establecen tres evaluaciones obligatorias:</p>
-        <ol>
-            <li><strong>Evaluación 1 (Semana 2): Organización Segura.</strong> Todos los equipos deben tener su código guardado en un repositorio seguro y profesional.</li>
-            <li><strong>Evaluación 2 (Semana 4): Pruebas de Funcionamiento.</strong> Demostrar que la aplicación no tiene errores graves al ejecutarse.</li>
-            <li><strong>Evaluación 3 (Semana 6): Plan de Mantenimiento.</strong> Presentar un documento claro de cómo se mantendrá en línea la aplicación y cuánto costará.</li>
-        </ol>
-    </section>
-
-    <hr>
-
-    <!-- ═══════════════ 6. HORARIOS ═══════════════ -->
-    <section>
-        <h2>6. Horarios de Auditoría y Acompañamiento Técnico</h2>
-        <p>Con base en la matriz de disponibilidad operativa de la Coordinación Técnica, se ha estructurado el siguiente calendario de acompañamiento intensivo:</p>
+        <h2>5. Propuesta de Horarios de Acompañamiento Técnico</h2>
+        <p>Estructura sugerida para las sesiones de mentoría técnica basándose en la disponibilidad operativa:</p>
 
         <table>
             <thead>
