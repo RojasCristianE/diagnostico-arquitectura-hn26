@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe de Diagnóstico — Hackathon Nicaragua 2026</title>
+    <meta name="description" content="Informe de Diagnóstico y Plan de Acompañamiento Técnico para los 17 equipos del Hackathon Nicaragua 2026. Centro de Innovación — INATEC.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0f172a;
+            --bg-card: #1e293b;
+            --bg-card-hover: #263348;
+            --border: #334155;
+            --text: #e2e8f0;
+            --text-muted: #94a3b8;
+            --primary: #3b82f6;
+            --accent: #f59e0b;
+            --danger: #ef4444;
+            --success: #10b981;
+            --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: var(--font);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            font-size: 16px;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 4rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0 2rem;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 2.5rem;
+        }
+        header h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.25rem;
+        }
+        header h2 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        .meta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+        .meta span { white-space: nowrap; }
+
+        /* Sections */
+        section { margin-bottom: 3rem; }
+        section > h2 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary);
+            margin-bottom: 1.25rem;
+        }
+        section h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 1.5rem 0 0.75rem;
+        }
+        p, li { color: var(--text); }
+        p { margin-bottom: 1rem; }
+
+        /* Lists */
+        ul, ol {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        li { margin-bottom: 0.4rem; }
+        li strong { color: var(--text); }
+
+        /* Cards */
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 1rem;
+            transition: background 0.2s;
+        }
+        .card:hover { background: var(--bg-card-hover); }
+        .card h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .card p { font-size: 0.95rem; margin-bottom: 0.5rem; }
+
+        /* Tags */
+        .tag {
+            display: inline-block;
+            padding: 0.15rem 0.6rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        .tag-danger { background: rgba(239,68,68,.15); color: var(--danger); border: 1px solid rgba(239,68,68,.3); }
+        .tag-warn { background: rgba(245,158,11,.15); color: var(--accent); border: 1px solid rgba(245,158,11,.3); }
+        .tag-ok { background: rgba(16,185,129,.15); color: var(--success); border: 1px solid rgba(16,185,129,.3); }
+
+        /* Summary grid */
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1.25rem 0;
+        }
+        .summary-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 1.25rem;
+            text-align: center;
+        }
+        .summary-item .number {
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+        .summary-item .label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 0.35rem;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0 1.5rem;
+            font-size: 0.9rem;
+        }
+        thead th {
+            text-align: left;
+            padding: 0.75rem;
+            background: var(--bg-card);
+            border-bottom: 2px solid var(--primary);
+            font-weight: 600;
+            color: var(--text);
+        }
+        td {
+            padding: 0.65rem 0.75rem;
+            border-bottom: 1px solid var(--border);
+        }
+        tr:hover td { background: var(--bg-card); }
+
+        /* Callouts */
+        .callout {
+            border-left: 4px solid var(--accent);
+            background: rgba(245,158,11,.06);
+            padding: 1rem 1.25rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1rem 0;
+            font-size: 0.95rem;
+        }
+        .callout strong { color: var(--accent); }
+
+        /* Images */
+        .viz-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .viz-grid figure {
+            margin: 0;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .viz-grid img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .viz-grid figcaption {
+            padding: 0.6rem 1rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-align: center;
+        }
+        figure.full-width {
+            margin: 1.5rem 0;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        figure.full-width img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        figure.full-width figcaption {
+            padding: 0.6rem 1rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        /* Separator */
+        hr {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 2.5rem 0;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 1px solid var(--border);
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            header h1 { font-size: 1.4rem; }
+            .meta { flex-direction: column; gap: 0.3rem; align-items: center; }
+            .summary-grid { grid-template-columns: repeat(2, 1fr); }
+            .viz-grid { grid-template-columns: 1fr; }
+            table { font-size: 0.8rem; }
+            td, th { padding: 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <header>
+        <h1>Informe de Diagnóstico y Plan de Acompañamiento Técnico</h1>
+        <h2>Hackathon Nicaragua 2026</h2>
+        <div class="meta">
+            <span><strong>Preparado por:</strong> Coordinación Técnica — Centro de Innovación (INATEC)</span>
+            <span><strong>Fecha:</strong> Mayo 2026</span>
+        </div>
+    </header>
+
+    <!-- ═══════════════ 1. RESUMEN EJECUTIVO ═══════════════ -->
+    <section>
+        <h2>1. Resumen Ejecutivo</h2>
+        <p>El presente documento resume los resultados del primer diagnóstico técnico realizado a los <strong>17 equipos</strong> participantes en la fase de incubación del Hackathon Nicaragua 2026. Este análisis evaluó áreas clave como la conformación de los equipos, el manejo del código, las tecnologías seleccionadas y las estrategias de control de calidad.</p>
+        <p>El propósito de este diagnóstico es asegurar que las aplicaciones desarrolladas sean estables, seguras y viables para su uso a largo plazo.</p>
+
+        <div class="summary-grid">
+            <div class="summary-item">
+                <div class="number">17</div>
+                <div class="label">Proyectos Evaluados</div>
+            </div>
+            <div class="summary-item">
+                <div class="number" style="color: var(--danger);">3</div>
+                <div class="label">Atención Urgente (17.6%)</div>
+            </div>
+            <div class="summary-item">
+                <div class="number" style="color: var(--accent);">7</div>
+                <div class="label">Atención Moderada (41.2%)</div>
+            </div>
+            <div class="summary-item">
+                <div class="number" style="color: var(--success);">7</div>
+                <div class="label">Progreso Adecuado (41.2%)</div>
+            </div>
+        </div>
+
+        <div class="callout">
+            <strong>Principal Punto de Mejora:</strong> Control de Calidad (Pruebas de funcionamiento). Más del 50% de los equipos realizan pruebas manuales básicas y un 17.6% prueba "a medida que programa", sin contar con un método estructurado para evitar errores, lo cual es riesgoso considerando que el 64.7% de los proyectos manejará información sensible de los usuarios.
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- ═══════════════ 2. TECNOLOGÍAS ═══════════════ -->
+    <section>
+        <h2>2. Tecnologías Preferidas por los Equipos</h2>
+        <p>El análisis muestra tendencias claras en las herramientas elegidas por los jóvenes para construir sus aplicaciones:</p>
+        <ul>
+            <li><strong>Interfaz de Usuario (Diseño visual y apps):</strong> La mayoría (52.9%) se inclina por tecnologías móviles (Flutter / React Native), demostrando una fuerte preferencia por crear aplicaciones para celulares, seguido por páginas web tradicionales (29.4%).</li>
+            <li><strong>Lógica y Bases de Datos:</strong> El 29.4% prefiere utilizar plataformas en la nube pre-configuradas (como Firebase o Supabase), mientras que el resto se divide entre tecnologías de programación a medida como Node.js y Python.</li>
+        </ul>
+
+        <div class="viz-grid">
+            <figure>
+                <img src="assets/01_stack_heatmap.png" alt="Matriz de Ecosistema Tecnológico" loading="lazy">
+                <figcaption>Combinaciones de tecnologías elegidas por los equipos</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/04_radar_profile.png" alt="Perfil de Riesgo del Ecosistema" loading="lazy">
+                <figcaption>Perfil de riesgo promedio de los 17 equipos</figcaption>
+            </figure>
+        </div>
+
+        <div class="callout">
+            <strong>Observación de la Coordinación Técnica:</strong> El uso intensivo de plataformas en la nube pre-configuradas puede generar costos imprevistos a futuro si las aplicaciones crecen. Actualmente, el <strong>41.2%</strong> de los equipos indica que "aún no ha explorado los costos para mantener su aplicación en línea", por lo que se requiere asesoría urgente en este aspecto.
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- ═══════════════ 3. ÁREAS DE ATENCIÓN ═══════════════ -->
+    <section>
+        <h2>3. Áreas de Atención Prioritaria</h2>
+        <p>El sistema de análisis identificó ciertas deficiencias que deben corregirse para evitar problemas en etapas posteriores:</p>
+
+        <div class="card">
+            <h4>🚨 Seguridad de la Información y Manejo del Código</h4>
+            <p><strong>Equipo Destacado:</strong> Va D' Viaje (Anteriormente NikaRoute+)</p>
+            <p>El equipo planea manejar datos sensibles (ubicación de usuarios en tiempo real), pero actualmente guarda y comparte su código de forma insegura (memorias USB, WhatsApp o Google Drive).</p>
+            <p><span class="tag tag-danger">Acción:</span> Exigir y enseñar el uso de plataformas seguras y profesionales para guardar el código (como GitHub).</p>
+        </div>
+
+        <div class="card">
+            <h4>⚠️ Falta de Control de Calidad</h4>
+            <p><strong>7 proyectos afectados:</strong> No te Aisles, Kira, MilpaGrow, NexuVida, NicaPrime, Nicabite/Fritinder, Hogari.</p>
+            <p>Son proyectos complejos que carecen de un plan estructurado para comprobar que la aplicación funcione bien antes de presentarla.</p>
+            <p><span class="tag tag-warn">Acción:</span> Capacitarlos en la creación de pruebas de funcionamiento básico.</p>
+        </div>
+
+        <div class="card">
+            <h4>📉 Planificación de Costos y Presupuesto</h4>
+            <p><strong>Equipos afectados:</strong> No te Aisles, Nicabite/Fritinder, Hogari.</p>
+            <p>Proyectos de alta dificultad técnica que no han contemplado cuánto costará mantener la aplicación funcionando en internet.</p>
+            <p><span class="tag tag-warn">Acción:</span> Sesiones de trabajo para optimizar recursos y buscar alternativas gratuitas viables.</p>
+        </div>
+
+        <figure class="full-width">
+            <img src="assets/03_security_matrix.png" alt="Matriz de Vulnerabilidad de Seguridad" loading="lazy">
+            <figcaption>Cruce entre sensibilidad de datos y gestión del código fuente</figcaption>
+        </figure>
+    </section>
+
+    <hr>
+
+    <!-- ═══════════════ 4. CASOS URGENTES ═══════════════ -->
+    <section>
+        <h2>4. Casos que Requieren Acompañamiento Urgente</h2>
+        <p>Existen tres proyectos que, por su alta dificultad y falta de organización técnica, requieren intervención inmediata:</p>
+
+        <figure class="full-width">
+            <img src="assets/02_risk_ranking.png" alt="Ranking de Riesgo Arquitectónico" loading="lazy">
+            <figcaption>Ranking completo de los 17 equipos ordenados por nivel de riesgo</figcaption>
+        </figure>
+
+        <div class="card" style="border-left: 3px solid var(--danger);">
+            <h4>Caso A: "No te Aisles" <span class="tag tag-danger">Urgente</span></h4>
+            <p><strong>Diagnóstico:</strong> Es el proyecto que requiere mayor atención. Tienen una idea muy compleja, dependen totalmente de servicios externos, no han calculado costos, carecen de programadores dedicados y no tienen plan de pruebas.</p>
+            <p><strong>Plan de Acción:</strong> Reducir las funciones de la aplicación a lo más esencial (pivoteo) para que puedan terminar a tiempo.</p>
+        </div>
+
+        <div class="card" style="border-left: 3px solid var(--danger);">
+            <h4>Caso B: "IslaVoz" <span class="tag tag-danger">Urgente</span></h4>
+            <p><strong>Diagnóstico:</strong> Aunque su idea es más sencilla, siguen compartiendo su código de manera manual e insegura y no tienen cómo probar la aplicación eficientemente.</p>
+            <p><strong>Plan de Acción:</strong> Asignación de un mentor para configurar inmediatamente un sistema profesional para guardar su código.</p>
+        </div>
+
+        <div class="card" style="border-left: 3px solid var(--danger);">
+            <h4>Caso C: "Hogari" <span class="tag tag-danger">Urgente</span></h4>
+            <p><strong>Diagnóstico:</strong> Manejarán datos personales, pero no tienen programadores dedicados ni presupuesto planificado.</p>
+            <p><strong>Plan de Acción:</strong> Orientarlos hacia tecnologías gratuitas y simplificar su diseño técnico.</p>
+        </div>
+
+        <div class="viz-grid">
+            <figure>
+                <img src="assets/06_complexity_landscape.png" alt="Paisaje de Complejidad vs Riesgo" loading="lazy">
+                <figcaption>Complejidad vs Riesgo — Los puntos más grandes tienen más alertas activas</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/05_mentorship_distribution.png" alt="Distribución de Mentoría" loading="lazy">
+                <figcaption>Áreas de mentoría más solicitadas por los equipos</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- ═══════════════ 5. HITOS ═══════════════ -->
+    <section>
+        <h2>5. Hitos de Evaluación (Puntos de Control)</h2>
+        <p>Para garantizar la calidad de los proyectos y no saturar al equipo de coordinación, se establecen tres evaluaciones obligatorias:</p>
+        <ol>
+            <li><strong>Evaluación 1 (Semana 2): Organización Segura.</strong> Todos los equipos deben tener su código guardado en un repositorio seguro y profesional.</li>
+            <li><strong>Evaluación 2 (Semana 4): Pruebas de Funcionamiento.</strong> Demostrar que la aplicación no tiene errores graves al ejecutarse.</li>
+            <li><strong>Evaluación 3 (Semana 6): Plan de Mantenimiento.</strong> Presentar un documento claro de cómo se mantendrá en línea la aplicación y cuánto costará.</li>
+        </ol>
+    </section>
+
+    <hr>
+
+    <!-- ═══════════════ 6. HORARIOS ═══════════════ -->
+    <section>
+        <h2>6. Horarios de Auditoría y Acompañamiento Técnico</h2>
+        <p>Con base en la matriz de disponibilidad operativa de la Coordinación Técnica, se ha estructurado el siguiente calendario de acompañamiento intensivo:</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Día</th>
+                    <th>Horario</th>
+                    <th>Foco Técnico</th>
+                    <th>Equipos Asignados</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Miércoles</strong></td>
+                    <td>17:00 - 22:00</td>
+                    <td>Bases de Datos, Lógica y Casos Críticos</td>
+                    <td><span class="tag tag-danger">No te Aisles, IslaVoz, Hogari</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Viernes</strong></td>
+                    <td>17:00 - 22:00</td>
+                    <td>Seguridad, APIs y Estructura</td>
+                    <td><span class="tag tag-warn">Va D' Viaje, NexuVida, Mecani</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Jueves</strong></td>
+                    <td>17:00 - 19:00 / 20:00 - 22:00</td>
+                    <td>Control de Calidad y Pruebas</td>
+                    <td><span class="tag tag-warn">MilpaGrow, NicaPrime, Nicabite</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Martes</strong></td>
+                    <td>17:00 - 18:00 / 19:00 - 22:00</td>
+                    <td>Revisión de Arquitectura y Costos</td>
+                    <td><span class="tag tag-ok">Rommy, NovaMind + 2 equipos</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Lunes</strong></td>
+                    <td>17:00 - 18:00 / 19:00 - 22:00</td>
+                    <td>Validación de Avances</td>
+                    <td><span class="tag tag-ok">5 equipos de progreso adecuado</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Sábado</strong></td>
+                    <td>17:00 - 22:00</td>
+                    <td>Consultas Generales y Apoyo a Mentores</td>
+                    <td><span class="tag tag-ok">Espacio abierto</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>Este esquema garantiza que los equipos con mayores riesgos reciban orientación técnica en bloques de tiempo dedicados y sin interrupciones.</p>
+    </section>
+
+    <footer>
+        <p>Generado automáticamente por el Pipeline de Diagnóstico Arquitectónico v1.0.0</p>
+        <p>Centro de Innovación — INATEC Nicaragua · Hackathon 2026</p>
+    </footer>
+
+</div>
+</body>
+</html>

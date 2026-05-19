@@ -1,0 +1,72 @@
+name: Pipeline de Diagnóstico Arquitectónico
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/**'
+      - 'src/**'
+      - 'run_pipeline.py'
+      - 'docs/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # ── Job 1: Ejecutar el pipeline y generar outputs ──────────────────────────
+  run-pipeline:
+    name: Ejecutar Pipeline de Telemetría
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Ejecutar pipeline
+        run: python run_pipeline.py
+
+      - name: Copiar gráficas al sitio
+        run: |
+          mkdir -p docs/assets
+          cp outputs/plots/*.png docs/assets/
+
+      - name: Commit de outputs generados
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add outputs/ docs/assets/
+          git diff --cached --quiet || git commit -m "chore: actualizar outputs del pipeline [skip ci]"
+          git push
+
+      - name: Subir artefacto para Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/
+
+  # ── Job 2: Desplegar GitHub Pages ──────────────────────────────────────────
+  deploy-pages:
+    name: Desplegar Informe en GitHub Pages
+    needs: run-pipeline
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Desplegar a GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
