@@ -2,7 +2,7 @@
   "$schema": "observatorio-telemetria-arquitectura-v1",
   "metadata": {
     "pipeline_version": "1.0.0",
-    "generated_at": "2026-05-19T04:54:33.302123+00:00",
+    "generated_at": "2026-05-19T13:04:21.996902+00:00",
     "source": "Diagnóstico de Arquitectura y Plan de Desarrollo",
     "n_startups": 17,
     "n_features": 36,
