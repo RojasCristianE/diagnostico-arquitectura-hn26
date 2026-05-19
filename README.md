@@ -69,7 +69,7 @@ El workflow:
 Una vez configurado GitHub Pages (Settings → Pages → Source: GitHub Actions), el informe estará disponible en:
 
 ```
-https://<usuario>.github.io/diagnostico-arquitectura-hn26/
+https://rojascristiane.github.io/diagnostico-arquitectura-hn26/
 ```
 
 ---
