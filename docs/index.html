@@ -262,20 +262,20 @@
     <!-- ═══════════════ 1. RESUMEN EJECUTIVO ═══════════════ -->
     <section>
         <h2>1. Resumen Ejecutivo (Propuesta)</h2>
-        <p>El presente documento resume los hallazgos preliminares de un diagnóstico técnico realizado a una muestra de <strong>17 startups</strong> que respondieron al formulario inicial en el momento del corte de datos. Este análisis, basado en las respuestas obtenidas a través del <a href="https://github.com/RojasCristianE/diagnostico-arquitectura-hn26/blob/main/Formularios/Diagn%C3%B3stico%20de%20Arquitectura%20y%20Plan%20de%20Desarrollo.md" style="color: var(--primary);">Formulario de Diagnóstico de Arquitectura</a>, evalúa áreas como la conformación de equipos, manejo de código y tecnologías seleccionadas.</p>
+        <p>El presente documento resume los hallazgos preliminares de un diagnóstico técnico realizado a una muestra de <strong>23 startups</strong> que respondieron al formulario inicial en el momento del corte de datos. Este análisis, basado en las respuestas obtenidas a través del <a href="https://github.com/RojasCristianE/diagnostico-arquitectura-hn26/blob/main/Formularios/Diagn%C3%B3stico%20de%20Arquitectura%20y%20Plan%20de%20Desarrollo.md" style="color: var(--primary);">Formulario de Diagnóstico de Arquitectura</a>, evalúa áreas como la conformación de equipos, manejo de código y tecnologías seleccionadas.</p>
         <p>Se presenta como una prueba de concepto para identificar posibles sugerencias de acompañamiento que aseguren la estabilidad y viabilidad técnica de los proyectos a largo plazo.</p>
 
         <div class="summary-grid">
             <div class="summary-item">
-                <div class="number">17</div>
+                <div class="number">23</div>
                 <div class="label">Startups Analizadas (Muestra)</div>
             </div>
             <div class="summary-item">
-                <div class="number" style="color: var(--danger);">3</div>
+                <div class="number" style="color: var(--danger);">5</div>
                 <div class="label">Sugerencia de Atención Urgente</div>
             </div>
             <div class="summary-item">
-                <div class="number" style="color: var(--accent);">7</div>
+                <div class="number" style="color: var(--accent);">11</div>
                 <div class="label">Sugerencia de Atención Moderada</div>
             </div>
             <div class="summary-item">
@@ -285,7 +285,7 @@
         </div>
 
         <div class="callout">
-            <strong>Área de Oportunidad Sugerida:</strong> Control de Calidad. Basado en la muestra, una parte significativa de los equipos parece realizar pruebas de forma ad-hoc, lo que sugiere una oportunidad para fortalecer los procesos de validación técnica.
+            <strong>Área de Oportunidad Sugerida:</strong> Control de Calidad. Basado en la muestra, aproximadamente el <strong>47.8%</strong> de los equipos realiza pruebas manuales básicas y un <strong>26.1%</strong> prueba "a medida que programa", lo que sugiere una oportunidad para fortalecer los procesos de validación técnica antes de las fases finales.
         </div>
     </section>
 
@@ -296,8 +296,8 @@
         <h2>2. Tendencias Tecnológicas Observadas</h2>
         <p>A partir de la muestra analizada, se identifican las siguientes tendencias en las herramientas elegidas por los equipos:</p>
         <ul>
-            <li><strong>Interfaz de Usuario (Diseño visual y apps):</strong> La mayoría (52.9%) se inclina por tecnologías móviles (Flutter / React Native), demostrando una fuerte preferencia por crear aplicaciones para celulares, seguido por páginas web tradicionales (29.4%).</li>
-            <li><strong>Lógica y Bases de Datos:</strong> El 29.4% prefiere utilizar plataformas en la nube pre-configuradas (como Firebase o Supabase), mientras que el resto se divide entre tecnologías de programación a medida como Node.js y Python.</li>
+            <li><strong>Interfaz de Usuario (Diseño visual y apps):</strong> La plataforma web lidera con un <strong>52.2%</strong>, seguida de aplicaciones móviles nativas con un <strong>39.1%</strong>. El stack dominante para el frontend es Flutter/React Native (43.5%).</li>
+            <li><strong>Lógica y Bases de Datos:</strong> El <strong>30.4%</strong> prefiere utilizar plataformas BaaS (Firebase/Supabase), seguido de Node.js (26.1%).</li>
         </ul>
 
         <div class="viz-grid">
@@ -307,12 +307,12 @@
             </figure>
             <figure>
                 <img src="assets/04_radar_profile.png" alt="Perfil de Riesgo del Ecosistema" loading="lazy">
-                <figcaption>Perfil de riesgo promedio de los 17 equipos</figcaption>
+                <figcaption>Perfil de riesgo promedio de los 23 equipos</figcaption>
             </figure>
         </div>
 
         <div class="callout">
-            <strong>Sugerencia de Acompañamiento:</strong> Se observa que el uso de plataformas en la nube pre-configuradas es común. Dado que una parte de la muestra aún no ha explorado los costos de mantenimiento, se sugiere incluir sesiones sobre optimización de recursos en la nube.
+            <strong>Sugerencia de Acompañamiento:</strong> Se observa que el uso de plataformas en la nube es común. Dado que un <strong>34.8%</strong> de la muestra aún no ha explorado los costos de mantenimiento, se sugiere incluir sesiones sobre optimización de recursos en la nube.
         </div>
     </section>
 
@@ -326,21 +326,21 @@
         <div class="card">
             <h4>🚨 Gestión del Código y Seguridad</h4>
             <p><strong>Observación en muestra:</strong> Va D' Viaje (Anteriormente NikaRoute+)</p>
-            <p>Se identificó la oportunidad de migrar la gestión de código desde métodos manuales hacia plataformas profesionales de control de versiones.</p>
-            <p><span class="tag tag-danger">Propuesta:</span> Fomentar el uso de repositorios en la nube para asegurar la trazabilidad del desarrollo.</p>
+            <p>Se identificó un caso donde el manejo de datos sensibles coincide con una gestión de código aún en transición hacia herramientas de control de versiones profesionales.</p>
+            <p><span class="tag tag-danger">Propuesta:</span> Fomentar el uso de repositorios en la nube con ramas estructuradas, práctica ya adoptada por el 73.9% de la muestra.</p>
         </div>
 
         <div class="card">
             <h4>⚠️ Fortalecimiento de Control de Calidad</h4>
-            <p><strong>Casos en muestra:</strong> No te Aisles, Kira, MilpaGrow, NexuVida, NicaPrime, Nicabite/Fritinder, Hogari.</p>
-            <p>Para proyectos con lógica compleja, se sugiere estructurar planes de pruebas de funcionamiento básico.</p>
+            <p><strong>Casos identificados (Brecha de QA):</strong> No te Aisles, Kira, MilpaGrow, NexuVida, NicaPrime, Nicabite/Fritinder, Hogari, NeoFluid3D, NICABUY, Retina Care, Manos granadinas.</p>
+            <p>Para proyectos con lógica compleja (Complejidad ≥ 4), se sugiere estructurar planes de pruebas para mitigar riesgos técnicos.</p>
             <p><span class="tag tag-warn">Propuesta:</span> Introducir conceptos de pruebas manuales estructuradas o QA básico.</p>
         </div>
 
         <div class="card">
             <h4>📉 Estimación de Costos Operativos</h4>
-            <p><strong>Casos en muestra:</strong> No te Aisles, Nicabite/Fritinder, Hogari.</p>
-            <p>Se propone apoyar a estos equipos en la proyección de costos de infraestructura para evitar bloqueos por falta de presupuesto.</p>
+            <p><strong>Casos identificados (Riesgo de Presupuesto):</strong> No te Aisles, Nicabite/Fritinder, Hogari, Manos granadinas.</p>
+            <p>Se propone apoyar a estos equipos de alta complejidad que aún no cuentan con un presupuesto técnico definido.</p>
             <p><span class="tag tag-warn">Propuesta:</span> Revisión de alternativas 'Free Tier' y optimización de servicios.</p>
         </div>
 
@@ -355,7 +355,7 @@
     <!-- ═══════════════ 4. CASOS PARA SEGUIMIENTO ═══════════════ -->
     <section>
         <h2>4. Casos Propuestos para Seguimiento Prioritario</h2>
-        <p>A partir de la muestra, se identifican proyectos que podrían beneficiarse de un acompañamiento técnico más cercano debido a su complejidad percibida:</p>
+        <p>A partir de la muestra, se identifican proyectos que podrían beneficiarse de un acompañamiento técnico más cercano debido a su complejidad y alertas activas:</p>
 
         <figure class="full-width">
             <img src="assets/02_risk_ranking.png" alt="Ranking de Riesgo Arquitectónico" loading="lazy">
@@ -364,19 +364,19 @@
 
         <div class="card" style="border-left: 3px solid var(--danger);">
             <h4>Caso A: "No te Aisles" <span class="tag tag-danger">Prioridad</span></h4>
-            <p><strong>Diagnóstico Sugerido:</strong> Proyecto con alta dependencia externa y complejidad percibida. Se sugiere revisar la priorización de funcionalidades para asegurar la entrega del MVP.</p>
+            <p><strong>Diagnóstico Sugerido:</strong> Proyecto con 4 flags activos (Presupuesto, Tensión de Equipo, QA y APIs). Se sugiere revisar la priorización de funcionalidades.</p>
             <p><strong>Propuesta de Acción:</strong> Sesión de simplificación técnica y priorización de funciones críticas.</p>
         </div>
 
         <div class="card" style="border-left: 3px solid var(--danger);">
-            <h4>Caso B: "IslaVoz" <span class="tag tag-danger">Prioridad</span></h4>
-            <p><strong>Diagnóstico Sugerido:</strong> Oportunidad de mejora en la seguridad de la gestión de activos digitales y código fuente.</p>
-            <p><strong>Propuesta de Acción:</strong> Apoyo técnico para la configuración de entornos de desarrollo colaborativos seguros.</p>
+            <h4>Caso B: "Manos granadinas" <span class="tag tag-danger">Prioridad</span></h4>
+            <p><strong>Diagnóstico Sugerido:</strong> Uso de métodos manuales para código y falta de presupuesto explorado para un proyecto de complejidad alta.</p>
+            <p><strong>Propuesta de Acción:</strong> Migración inmediata a GitHub y taller de costos en la nube.</p>
         </div>
 
         <div class="card" style="border-left: 3px solid var(--danger);">
             <h4>Caso C: "Hogari" <span class="tag tag-danger">Prioridad</span></h4>
-            <p><strong>Diagnóstico Sugerido:</strong> Requiere definición de roles técnicos y planificación de infraestructura para el manejo de datos.</p>
+            <p><strong>Diagnóstico Sugerido:</strong> Alta sensibilidad de datos combinada con falta de desarrolladores dedicados y brecha de QA.</p>
             <p><strong>Propuesta de Acción:</strong> Orientación hacia arquitecturas simplificadas y de bajo costo.</p>
         </div>
 
