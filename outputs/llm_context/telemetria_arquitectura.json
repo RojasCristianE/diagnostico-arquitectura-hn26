@@ -2,7 +2,7 @@
   "$schema": "observatorio-telemetria-arquitectura-v1",
   "metadata": {
     "pipeline_version": "1.0.0",
-    "generated_at": "2026-05-20T03:17:03.450604+00:00",
+    "generated_at": "2026-05-20T03:18:33.095700+00:00",
     "source": "Diagnóstico de Arquitectura y Plan de Desarrollo",
     "n_startups": 23,
     "n_features": 36,
@@ -1038,37 +1038,37 @@
   "visualization_manifest": [
     {
       "id": "stack_heatmap",
-      "path": "/home/cristian/Documentos/UNI/CI/diagnostico-arquitectura-hn26/outputs/plots/01_stack_heatmap.png",
+      "path": "/home/runner/work/diagnostico-arquitectura-hn26/diagnostico-arquitectura-hn26/outputs/plots/01_stack_heatmap.png",
       "title": "Matriz de Ecosistema Tecnológico (Frontend × Backend)",
       "description": "Heatmap de combinaciones de stack tecnológico. Revela clustering de ecosistemas y dependencias tecnológicas dominantes."
     },
     {
       "id": "risk_ranking",
-      "path": "/home/cristian/Documentos/UNI/CI/diagnostico-arquitectura-hn26/outputs/plots/02_risk_ranking.png",
+      "path": "/home/runner/work/diagnostico-arquitectura-hn26/diagnostico-arquitectura-hn26/outputs/plots/02_risk_ranking.png",
       "title": "Ranking de Riesgo Arquitectónico por Startup",
       "description": "Clasificación de startups por score de riesgo compuesto. Identifica proyectos que requieren intervención prioritaria."
     },
     {
       "id": "security_matrix",
-      "path": "/home/cristian/Documentos/UNI/CI/diagnostico-arquitectura-hn26/outputs/plots/03_security_matrix.png",
+      "path": "/home/runner/work/diagnostico-arquitectura-hn26/diagnostico-arquitectura-hn26/outputs/plots/03_security_matrix.png",
       "title": "Matriz de Vulnerabilidad de Seguridad",
       "description": "Cruce de sensibilidad de datos vs. prácticas de gestión de código. El cuadrante Alta+Manual indica vulnerabilidad crítica."
     },
     {
       "id": "radar_profile",
-      "path": "/home/cristian/Documentos/UNI/CI/diagnostico-arquitectura-hn26/outputs/plots/04_radar_profile.png",
+      "path": "/home/runner/work/diagnostico-arquitectura-hn26/diagnostico-arquitectura-hn26/outputs/plots/04_radar_profile.png",
       "title": "Perfil de Riesgo Promedio del Ecosistema (Radar)",
       "description": "Spider chart multidimensional del riesgo promedio del cohort. Revela las debilidades sistémicas del ecosistema."
     },
     {
       "id": "mentorship_distribution",
-      "path": "/home/cristian/Documentos/UNI/CI/diagnostico-arquitectura-hn26/outputs/plots/05_mentorship_distribution.png",
+      "path": "/home/runner/work/diagnostico-arquitectura-hn26/diagnostico-arquitectura-hn26/outputs/plots/05_mentorship_distribution.png",
       "title": "Distribución de Demanda de Mentoría Prioritaria",
       "description": "Distribución de áreas de mentoría solicitadas. Informa la asignación estratégica de recursos de acompañamiento."
     },
     {
       "id": "complexity_landscape",
-      "path": "/home/cristian/Documentos/UNI/CI/diagnostico-arquitectura-hn26/outputs/plots/06_complexity_landscape.png",
+      "path": "/home/runner/work/diagnostico-arquitectura-hn26/diagnostico-arquitectura-hn26/outputs/plots/06_complexity_landscape.png",
       "title": "Paisaje de Complejidad vs Riesgo Arquitectónico",
       "description": "Scatter bidimensional: complejidad auto-reportada vs. riesgo calculado. El tamaño del punto indica el número de flags de vulnerabilidad activos. Identifica startups en la 'zona crítica' (alta complejidad + alto riesgo)."
     }
