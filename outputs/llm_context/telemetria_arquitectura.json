@@ -2,9 +2,9 @@
   "$schema": "observatorio-telemetria-arquitectura-v1",
   "metadata": {
     "pipeline_version": "1.0.0",
-    "generated_at": "2026-05-20T03:18:33.095700+00:00",
+    "generated_at": "2026-05-22T04:28:28.119788+00:00",
     "source": "Diagnóstico de Arquitectura y Plan de Desarrollo",
-    "n_startups": 23,
+    "n_startups": 27,
     "n_features": 36,
     "risk_scoring_weights": {
       "dedicated_devs_risk": 0.15,
@@ -17,216 +17,216 @@
     },
     "response_period": {
       "first": "2026-05-14T13:33:40",
-      "last": "2026-05-19T16:01:19"
+      "last": "2026-05-21T12:23:52"
     }
   },
   "executive_summary": {
-    "total_startups": 23,
+    "total_startups": 27,
     "risk_distribution": {
       "Medio": {
         "count": 11,
-        "pct": 47.8
+        "pct": 40.7
       },
       "Bajo": {
-        "count": 7,
-        "pct": 30.4
+        "count": 9,
+        "pct": 33.3
       },
       "Alto": {
-        "count": 5,
-        "pct": 21.7
+        "count": 7,
+        "pct": 25.9
       }
     },
     "risk_score_stats": {
-      "mean": 0.477,
+      "mean": 0.48,
       "median": 0.475,
-      "std": 0.141,
+      "std": 0.147,
       "min": 0.21,
       "max": 0.76,
-      "q1": 0.385,
-      "q3": 0.537
+      "q1": 0.373,
+      "q3": 0.6
     },
     "complexity_stats": {
-      "mean": 4.043,
+      "mean": 4.0,
       "median": 4.0,
-      "std": 0.706,
+      "std": 0.734,
       "min": 3.0,
       "max": 5.0,
-      "q1": 4.0,
+      "q1": 3.5,
       "q3": 4.5
     },
     "dominant_platform": "Web",
     "dominant_frontend": "Flutter/RN",
     "dominant_backend": "BaaS",
-    "startups_with_flags": 16,
-    "startups_zero_flags": 7
+    "startups_with_flags": 19,
+    "startups_zero_flags": 8
   },
   "dimensional_analysis": {
     "team_structure": {
       "Sí, tenemos roles técnicos dedicados.": {
-        "count": 13,
-        "pct": 56.5
+        "count": 16,
+        "pct": 59.3
       },
       "Nuestro equipo es multidisciplinario y compartimos roles (ej. el programador también diseña).": {
         "count": 8,
-        "pct": 34.8
+        "pct": 29.6
       },
       "Actualmente no tenemos desarrolladores puros, exploraremos herramientas No-Code o buscaremos sumar talento.": {
-        "count": 2,
-        "pct": 8.7
+        "count": 3,
+        "pct": 11.1
       }
     },
     "code_management": {
       "Uso de repositorios en la nube con ramas estructuradas.": {
-        "count": 17,
-        "pct": 73.9
+        "count": 20,
+        "pct": 74.1
       },
       "Un solo repositorio remoto.": {
         "count": 4,
-        "pct": 17.4
+        "pct": 14.8
       },
       "Aún usamos métodos manuales (Drive, Correo, WhatsApp, USB, etc).": {
-        "count": 2,
-        "pct": 8.7
+        "count": 3,
+        "pct": 11.1
       }
     },
     "platform": {
       "Web": {
-        "count": 12,
-        "pct": 52.2
+        "count": 14,
+        "pct": 51.9
       },
       "Móvil Nativa": {
-        "count": 9,
-        "pct": 39.1
+        "count": 11,
+        "pct": 40.7
       },
       "Híbrida (Web + Móvil)": {
         "count": 1,
-        "pct": 4.3
+        "pct": 3.7
       },
       "Escritorio": {
         "count": 1,
-        "pct": 4.3
+        "pct": 3.7
       }
     },
     "frontend_stack": {
       "Flutter/RN": {
-        "count": 10,
-        "pct": 43.5
+        "count": 13,
+        "pct": 48.1
       },
       "HTML/CSS/JS": {
         "count": 6,
-        "pct": 26.1
+        "pct": 22.2
       },
       "React/Vue/Angular": {
-        "count": 5,
-        "pct": 21.7
+        "count": 6,
+        "pct": 22.2
       },
       "C++, Vulkan": {
         "count": 1,
-        "pct": 4.3
+        "pct": 3.7
       },
       "Php": {
         "count": 1,
-        "pct": 4.3
+        "pct": 3.7
       }
     },
     "backend_stack": {
       "BaaS": {
-        "count": 7,
-        "pct": 30.4
+        "count": 8,
+        "pct": 29.6
       },
       "Node.js": {
-        "count": 6,
-        "pct": 26.1
+        "count": 7,
+        "pct": 25.9
       },
       "Python": {
-        "count": 4,
-        "pct": 17.4
+        "count": 5,
+        "pct": 18.5
       },
       "Otros": {
-        "count": 2,
-        "pct": 8.7
+        "count": 3,
+        "pct": 11.1
       },
       "Edge/Serverless": {
         "count": 2,
-        "pct": 8.7
+        "pct": 7.4
       },
       "PHP/Laravel": {
         "count": 1,
-        "pct": 4.3
+        "pct": 3.7
       },
       "Sin BD": {
         "count": 1,
-        "pct": 4.3
+        "pct": 3.7
       }
     },
     "api_dependency": {
       "Sí, pero solo como características secundarias u opcionales.": {
-        "count": 13,
-        "pct": 56.5
+        "count": 15,
+        "pct": 55.6
+      },
+      "Sí, dependemos fuertemente de APIs de terceros.": {
+        "count": 7,
+        "pct": 25.9
       },
       "No, toda nuestra funcionalidad principal es de desarrollo propio.": {
         "count": 5,
-        "pct": 21.7
-      },
-      "Sí, dependemos fuertemente de APIs de terceros.": {
-        "count": 5,
-        "pct": 21.7
+        "pct": 18.5
       }
     },
     "cloud_budget": {
       "Sí, hemos calculado los costos y tenemos un presupuesto inicial.": {
-        "count": 9,
-        "pct": 39.1
+        "count": 11,
+        "pct": 40.7
       },
       "Aún no hemos explorado los costos de infraestructura.": {
-        "count": 8,
-        "pct": 34.8
+        "count": 10,
+        "pct": 37.0
       },
       "Planeamos utilizar exclusivamente las capas gratuitas (Free Tiers) de los servicios en la nube.": {
         "count": 6,
-        "pct": 26.1
+        "pct": 22.2
       }
     },
     "data_sensitivity": {
       "Alta sensibilidad (Datos financieros, expedientes médicos, ubicación en tiempo real).": {
-        "count": 14,
-        "pct": 60.9
+        "count": 16,
+        "pct": 59.3
       },
       "Media sensibilidad (Cuentas de usuario con correos y contraseñas).": {
-        "count": 5,
-        "pct": 21.7
+        "count": 6,
+        "pct": 22.2
       },
       "Baja sensibilidad (Navegación anónima o datos 100% públicos).": {
-        "count": 4,
-        "pct": 17.4
+        "count": 5,
+        "pct": 18.5
       }
     },
     "qa_strategy": {
       "Realizando pruebas manuales basadas en un checklist de control de calidad (QA).": {
-        "count": 10,
-        "pct": 43.5
+        "count": 12,
+        "pct": 44.4
       },
       "Desarrollando pruebas automatizadas (Unit/Integration testing).": {
-        "count": 7,
-        "pct": 30.4
+        "count": 8,
+        "pct": 29.6
       },
       "Probamos a medida que programamos.": {
-        "count": 6,
-        "pct": 26.1
+        "count": 7,
+        "pct": 25.9
       }
     },
     "ai_usage": {
       "Sí, pero solo como una funcionalidad extra (Ej. Un chatbot de ayuda).": {
-        "count": 14,
-        "pct": 60.9
+        "count": 16,
+        "pct": 59.3
       },
       "No, no utilizaremos IA en esta etapa del software.": {
         "count": 7,
-        "pct": 30.4
+        "pct": 25.9
       },
       "Sí, la IA es el núcleo de nuestro proyecto.": {
-        "count": 2,
-        "pct": 8.7
+        "count": 4,
+        "pct": 14.8
       }
     }
   },
@@ -235,14 +235,14 @@
       "description": "Cruce de sensibilidad de datos vs gestión de código. Celdas Alta+Manual indican vulnerabilidad de seguridad crítica.",
       "data": {
         "Manual": {
-          "Alta": 0,
+          "Alta": 1,
           "Baja": 2,
           "Media": 0
         },
         "Ramas": {
-          "Alta": 13,
-          "Baja": 0,
-          "Media": 4
+          "Alta": 14,
+          "Baja": 1,
+          "Media": 5
         },
         "Repo único": {
           "Alta": 1,
@@ -257,15 +257,15 @@
         "Ad-hoc": {
           "3": 1,
           "4": 3,
-          "5": 2
+          "5": 3
         },
         "Automatizada": {
           "3": 0,
-          "4": 5,
+          "4": 6,
           "5": 2
         },
         "Manual checklist": {
-          "3": 4,
+          "3": 6,
           "4": 4,
           "5": 2
         }
@@ -276,7 +276,7 @@
       "data": {
         "BaaS": {
           "C++, Vulkan": 0,
-          "Flutter/RN": 4,
+          "Flutter/RN": 5,
           "HTML/CSS/JS": 2,
           "Php": 1,
           "React/Vue/Angular": 0
@@ -293,11 +293,11 @@
           "Flutter/RN": 2,
           "HTML/CSS/JS": 2,
           "Php": 0,
-          "React/Vue/Angular": 2
+          "React/Vue/Angular": 3
         },
         "Otros": {
           "C++, Vulkan": 0,
-          "Flutter/RN": 2,
+          "Flutter/RN": 3,
           "HTML/CSS/JS": 0,
           "Php": 0,
           "React/Vue/Angular": 0
@@ -311,7 +311,7 @@
         },
         "Python": {
           "C++, Vulkan": 0,
-          "Flutter/RN": 2,
+          "Flutter/RN": 3,
           "HTML/CSS/JS": 1,
           "Php": 0,
           "React/Vue/Angular": 1
@@ -329,24 +329,26 @@
   "vulnerability_flags": {
     "security_vuln": {
       "description": "Vulnerabilidad de Seguridad (Alta sensibilidad + gestión débil de código)",
-      "affected_count": 1,
+      "affected_count": 2,
       "affected_startups": [
-        "Va D' Viaje (Anteriormente NikaRoute+)"
+        "Va D' Viaje (Anteriormente NikaRoute+)",
+        "Phinn"
       ]
     },
     "budget_crisis": {
       "description": "Crisis de Presupuesto (Sin presupuesto + complejidad ≥ 4)",
-      "affected_count": 4,
+      "affected_count": 5,
       "affected_startups": [
         "No te Aisles",
         "Nicabite/Fritinder",
         "Hogari",
-        "Manos granadinas"
+        "Manos granadinas",
+        "mediscan"
       ]
     },
     "team_strain": {
       "description": "Tensión de Equipo (Sin devs dedicados + complejidad ≥ 4)",
-      "affected_count": 9,
+      "affected_count": 10,
       "affected_startups": [
         "No te Aisles",
         "NexuVida",
@@ -356,12 +358,13 @@
         "Miempleo",
         "NICABUY",
         "Ruteo",
-        "Manos granadinas"
+        "Manos granadinas",
+        "mediscan"
       ]
     },
     "qa_gap": {
       "description": "Brecha de QA (QA inadecuada + complejidad ≥ 4)",
-      "affected_count": 11,
+      "affected_count": 12,
       "affected_startups": [
         "No te Aisles",
         "Kira",
@@ -373,17 +376,19 @@
         "NeoFluid3D",
         "NICABUY",
         "Retina Care",
-        "Manos granadinas"
+        "Manos granadinas",
+        "mediscan"
       ]
     },
     "api_exposure": {
       "description": "Exposición por APIs (Dependencia fuerte + datos sensibles)",
-      "affected_count": 4,
+      "affected_count": 5,
       "affected_startups": [
         "No te Aisles",
         "Mecani",
         "Retina Care",
-        "Ruteo"
+        "Ruteo",
+        "SUI"
       ]
     }
   },
@@ -448,6 +453,35 @@
       "cloud_budget": "Aún no hemos explorado los costos de infraestructura."
     },
     {
+      "startup": "mediscan",
+      "tech_lead": "Derek  Emilio Tellez  Duarte",
+      "platform": "Móvil Nativa",
+      "frontend": "Flutter/RN",
+      "backend": "Python",
+      "complexity_score": 5,
+      "risk_score": 0.7,
+      "risk_tier": "Alto",
+      "maturity_index": 0.3,
+      "active_flags": [
+        "budget_crisis",
+        "team_strain",
+        "qa_gap"
+      ],
+      "total_flags": 3,
+      "risk_dimensions": {
+        "dedicated_devs": 3,
+        "code_management": 1,
+        "data_sensitivity": 1,
+        "qa_strategy": 3,
+        "cloud_budget": 3,
+        "api_dependency": 3,
+        "ai_usage": 3
+      },
+      "mentorship_requested": "Cloud/Deploy",
+      "ai_usage": "Sí, la IA es el núcleo de nuestro proyecto.",
+      "cloud_budget": "Aún no hemos explorado los costos de infraestructura."
+    },
+    {
       "startup": "IslaVoz",
       "tech_lead": "Glida Sarahi Algaba Flores",
       "platform": "Web",
@@ -470,6 +504,33 @@
       },
       "mentorship_requested": "Backend/BD",
       "ai_usage": "No, no utilizaremos IA en esta etapa del software.",
+      "cloud_budget": "Aún no hemos explorado los costos de infraestructura."
+    },
+    {
+      "startup": "Phinn",
+      "tech_lead": "Carlos Francisco Fajardo Lamelas",
+      "platform": "Web",
+      "frontend": "React/Vue/Angular",
+      "backend": "Node.js",
+      "complexity_score": 3,
+      "risk_score": 0.645,
+      "risk_tier": "Alto",
+      "maturity_index": 0.355,
+      "active_flags": [
+        "security_vuln"
+      ],
+      "total_flags": 1,
+      "risk_dimensions": {
+        "dedicated_devs": 1,
+        "code_management": 3,
+        "data_sensitivity": 3,
+        "qa_strategy": 2,
+        "cloud_budget": 3,
+        "api_dependency": 2,
+        "ai_usage": 2
+      },
+      "mentorship_requested": "Negocios/Marketing",
+      "ai_usage": "Sí, pero solo como una funcionalidad extra (Ej. Un chatbot de ayuda).",
       "cloud_budget": "Aún no hemos explorado los costos de infraestructura."
     },
     {
@@ -882,6 +943,33 @@
       "cloud_budget": "Sí, hemos calculado los costos y tenemos un presupuesto inicial."
     },
     {
+      "startup": "SUI",
+      "tech_lead": "Marcos Adrian Cardoza Espinoza",
+      "platform": "Móvil Nativa",
+      "frontend": "Flutter/RN",
+      "backend": "BaaS",
+      "complexity_score": 4,
+      "risk_score": 0.36,
+      "risk_tier": "Bajo",
+      "maturity_index": 0.64,
+      "active_flags": [
+        "api_exposure"
+      ],
+      "total_flags": 1,
+      "risk_dimensions": {
+        "dedicated_devs": 1,
+        "code_management": 1,
+        "data_sensitivity": 3,
+        "qa_strategy": 1,
+        "cloud_budget": 1,
+        "api_dependency": 3,
+        "ai_usage": 3
+      },
+      "mentorship_requested": "Backend/BD",
+      "ai_usage": "Sí, la IA es el núcleo de nuestro proyecto.",
+      "cloud_budget": "Sí, hemos calculado los costos y tenemos un presupuesto inicial."
+    },
+    {
       "startup": "HatoMaster",
       "tech_lead": "Elmer Javier Urbina Meneses",
       "platform": "Web",
@@ -957,6 +1045,31 @@
       "cloud_budget": "Sí, hemos calculado los costos y tenemos un presupuesto inicial."
     },
     {
+      "startup": "VoxLab",
+      "tech_lead": "Andres Francisco Sanchez Santana",
+      "platform": "Web",
+      "frontend": "Flutter/RN",
+      "backend": "Otros",
+      "complexity_score": 3,
+      "risk_score": 0.295,
+      "risk_tier": "Bajo",
+      "maturity_index": 0.705,
+      "active_flags": [],
+      "total_flags": 0,
+      "risk_dimensions": {
+        "dedicated_devs": 1,
+        "code_management": 1,
+        "data_sensitivity": 2,
+        "qa_strategy": 2,
+        "cloud_budget": 1,
+        "api_dependency": 2,
+        "ai_usage": 2
+      },
+      "mentorship_requested": "Cloud/Deploy",
+      "ai_usage": "Sí, pero solo como una funcionalidad extra (Ej. Un chatbot de ayuda).",
+      "cloud_budget": "Sí, hemos calculado los costos y tenemos un presupuesto inicial."
+    },
+    {
       "startup": "Kira",
       "tech_lead": "Edwin José Silva Alvarado",
       "platform": "Móvil Nativa",
@@ -1010,65 +1123,65 @@
     }
   ],
   "mentorship_allocation": {
-    "Backend/BD": {
-      "count": 6,
-      "pct": 26.1
-    },
     "Cloud/Deploy": {
-      "count": 5,
-      "pct": 21.7
+      "count": 7,
+      "pct": 25.9
+    },
+    "Backend/BD": {
+      "count": 7,
+      "pct": 25.9
     },
     "Negocios/Marketing": {
-      "count": 4,
-      "pct": 17.4
+      "count": 5,
+      "pct": 18.5
     },
     "Integración APIs": {
       "count": 4,
-      "pct": 17.4
+      "pct": 14.8
     },
     "UX/UI": {
       "count": 3,
-      "pct": 13.0
+      "pct": 11.1
     },
     "En todo": {
       "count": 1,
-      "pct": 4.3
+      "pct": 3.7
     }
   },
   "visualization_manifest": [
     {
       "id": "stack_heatmap",
-      "path": "/home/runner/work/diagnostico-arquitectura-hn26/diagnostico-arquitectura-hn26/outputs/plots/01_stack_heatmap.png",
+      "path": "/home/cristian/Documentos/UNI/CI/diagnostico-arquitectura-hn26/outputs/plots/01_stack_heatmap.png",
       "title": "Matriz de Ecosistema Tecnológico (Frontend × Backend)",
       "description": "Heatmap de combinaciones de stack tecnológico. Revela clustering de ecosistemas y dependencias tecnológicas dominantes."
     },
     {
       "id": "risk_ranking",
-      "path": "/home/runner/work/diagnostico-arquitectura-hn26/diagnostico-arquitectura-hn26/outputs/plots/02_risk_ranking.png",
+      "path": "/home/cristian/Documentos/UNI/CI/diagnostico-arquitectura-hn26/outputs/plots/02_risk_ranking.png",
       "title": "Ranking de Riesgo Arquitectónico por Startup",
       "description": "Clasificación de startups por score de riesgo compuesto. Identifica proyectos que requieren intervención prioritaria."
     },
     {
       "id": "security_matrix",
-      "path": "/home/runner/work/diagnostico-arquitectura-hn26/diagnostico-arquitectura-hn26/outputs/plots/03_security_matrix.png",
+      "path": "/home/cristian/Documentos/UNI/CI/diagnostico-arquitectura-hn26/outputs/plots/03_security_matrix.png",
       "title": "Matriz de Vulnerabilidad de Seguridad",
       "description": "Cruce de sensibilidad de datos vs. prácticas de gestión de código. El cuadrante Alta+Manual indica vulnerabilidad crítica."
     },
     {
       "id": "radar_profile",
-      "path": "/home/runner/work/diagnostico-arquitectura-hn26/diagnostico-arquitectura-hn26/outputs/plots/04_radar_profile.png",
+      "path": "/home/cristian/Documentos/UNI/CI/diagnostico-arquitectura-hn26/outputs/plots/04_radar_profile.png",
       "title": "Perfil de Riesgo Promedio del Ecosistema (Radar)",
       "description": "Spider chart multidimensional del riesgo promedio del cohort. Revela las debilidades sistémicas del ecosistema."
     },
     {
       "id": "mentorship_distribution",
-      "path": "/home/runner/work/diagnostico-arquitectura-hn26/diagnostico-arquitectura-hn26/outputs/plots/05_mentorship_distribution.png",
+      "path": "/home/cristian/Documentos/UNI/CI/diagnostico-arquitectura-hn26/outputs/plots/05_mentorship_distribution.png",
       "title": "Distribución de Demanda de Mentoría Prioritaria",
       "description": "Distribución de áreas de mentoría solicitadas. Informa la asignación estratégica de recursos de acompañamiento."
     },
     {
       "id": "complexity_landscape",
-      "path": "/home/runner/work/diagnostico-arquitectura-hn26/diagnostico-arquitectura-hn26/outputs/plots/06_complexity_landscape.png",
+      "path": "/home/cristian/Documentos/UNI/CI/diagnostico-arquitectura-hn26/outputs/plots/06_complexity_landscape.png",
       "title": "Paisaje de Complejidad vs Riesgo Arquitectónico",
       "description": "Scatter bidimensional: complejidad auto-reportada vs. riesgo calculado. El tamaño del punto indica el número de flags de vulnerabilidad activos. Identifica startups en la 'zona crítica' (alta complejidad + alto riesgo)."
     }
