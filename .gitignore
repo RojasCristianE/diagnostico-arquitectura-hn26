@@ -21,3 +21,9 @@ env/
 # OS
 .DS_Store
 Thumbs.db
+
+# Data sources (no tracking)
+data/_respuestas_perfil.csv
+data/_listado_equipos.csv
+data/_seguimiento_equipos.pdf
+data/_seguimiento_equipos.md
